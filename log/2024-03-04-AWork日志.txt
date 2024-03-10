@@ -1,0 +1,17 @@
+2024/03/04 21:02:39 Response1 Status: 200 OK
+2024/03/04 21:02:39 工单系统共1张工单
+2024/03/04 21:02:39 1 工单号：042-20240304-0785 工单标题：自研NAT接口接收流量超限告警
+2024/03/04 21:02:42 Response2 Status: 200 OK
+2024/03/04 21:02:43 工单: 042-20240304-0785, 工单内容: "fault_desc":{"targetValue":"告警id: sy-f49dc25fa86c461a-1709556582381\n华东-上海1BC-SDN业务SHZQ-PSC-P17F19-SDN-S-CK-532QOS-1(设备管理IP:10.188.57.91)发生告警：\n告警标题：自研NAT接口接收流量超限告警\n告警描述：告警内容：@message:Mar  4 20:46:03.110837 SHZQ-PSC-P17F19-SDN-S-CK-532QOS-1 NOTICE root: Physical interface Ethernet8 to rx traffic bandwidth utilization is currently: 55.11%, the threshold you set is: 50,@host:10.188.57.91，告警定位信息：host:10.188.57.91，服务器定位信息：起始U位：36，占据U位：1，所属机房：上海-上海-颛桥数据中心-1-M0103，所属机架：SH-SH-ZQDC-01-M0103-04-01\n发生时间：2024-03-04 20:49:42\n告警标签: null\n","sourceValue"
+2024/03/04 21:02:43 未匹配到工单
+2024/03/04 21:02:43 =========== = sleep = ===========
+2024/03/04 21:03:18 Response1 Status: 200 OK
+2024/03/04 21:03:18 工单系统共1张工单
+2024/03/04 21:03:18 1 工单号：042-20240304-0785 工单标题：自研NAT接口接收流量超限告警
+2024/03/04 21:03:20 Response2 Status: 200 OK
+2024/03/04 21:03:21 工单: 042-20240304-0785, 工单内容: "fault_desc":{"targetValue":"告警id: sy-f49dc25fa86c461a-1709556582381\n华东-上海1BC-SDN业务SHZQ-PSC-P17F19-SDN-S-CK-532QOS-1(设备管理IP:10.188.57.91)发生告警：\n告警标题：自研NAT接口接收流量超限告警\n告警描述：告警内容：@message:Mar  4 20:46:03.110837 SHZQ-PSC-P17F19-SDN-S-CK-532QOS-1 NOTICE root: Physical interface Ethernet8 to rx traffic bandwidth utilization is currently: 55.11%, the threshold you set is: 50,@host:10.188.57.91，告警定位信息：host:10.188.57.91，服务器定位信息：起始U位：36，占据U位：1，所属机房：上海-上海-颛桥数据中心-1-M0103，所属机架：SH-SH-ZQDC-01-M0103-04-01\n发生时间：2024-03-04 20:49:42\n告警标签: null\n","sourceValue"
+2024/03/04 21:03:21 未匹配到工单
+2024/03/04 21:03:21 =========== = sleep = ===========
+2024/03/04 21:05:18 Response1 Status: 200 OK
+2024/03/04 21:05:18 工单系统共0张工单
+2024/03/04 21:05:18 =========== = sleep = ===========
