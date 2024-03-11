@@ -18,7 +18,7 @@ func main() {
 	var voice int = zfunc.Voice(zvar.Lineto)
 	for {
 		//==============================第一阶段： 目的：获取Form的map==============================
-		var body, bodyErr = zhttp.Zhttp1("POST", zvar.URL, zvar.Payload)
+		var body, bodyErr, statusCode = zhttp.Zhttp1("POST", zvar.URL, zvar.Payload)
 		//println(body)
 
 		//如果请求连续失败x次则输出提示
@@ -26,7 +26,9 @@ func main() {
 
 		//将工单输出 //Form工单摘要表
 		var Form = zhttp.InfoMap(body)
-		if bodyErr == nil {
+
+		//如果请求成功  状态码是200，则输出工单信息
+		if bodyErr == nil && statusCode == 200 {
 			log.Printf("工单系统共%d张工单\n", len(Form))
 
 			for i, oder := range Form {

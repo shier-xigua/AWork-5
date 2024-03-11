@@ -11,12 +11,12 @@ import (
 )
 
 // 获取body
-func Zhttp1(method, url, payload string) (string, error) {
+func Zhttp1(method, url, payload string) (string, error, int) {
 	//第一阶段，定义请求
 	request, err := http.NewRequest(method, url, bytes.NewBufferString(payload))
 	if err != nil {
 		log.Println("requests", err)
-		return "", err
+		return "", err, 0
 	}
 	//1.2设置请求头
 	for key, value := range zvar.Headers {
@@ -29,19 +29,23 @@ func Zhttp1(method, url, payload string) (string, error) {
 		log.Println("client", err)
 		*zfunc.ErrorCount++
 		//fmt.Println(*zfunc.ErrorCount)
-		return "", err
+		return "", err, response.StatusCode
 	} else {
-		log.Println("Response1 Status:", response.Status)
+		if response.StatusCode == 401 {
+			log.Printf("Response1 Status: %v, 认证失败！请更换Token和Authorization后重启AWork接单工具！！！", response.Status)
+		} else {
+			log.Println("Response1 Status:", response.Status)
+		}
 		*zfunc.ErrorCount = 0
 		//fmt.Println(*zfunc.ErrorCount)
 	}
 
 	//1.4读取工单系统工单摘要内容
 	body, _ := io.ReadAll(response.Body)
-	response.Body.Close()
+	defer response.Body.Close()
 	client.CloseIdleConnections()
 	//1.5 返回值，工单系统摘要body,这个内容交给
-	return string(body), err
+	return string(body), err, response.StatusCode
 }
 
 // 将body内容分解
