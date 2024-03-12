@@ -40,11 +40,11 @@ func Zhttp3(lineto int, sliceInterface [][]interface{}) {
 					log.Printf(" 接单成功,匹配字段为：%v，工单号：%v 工单标题：%v ,taskid：%v, ProcessInstanceId:%v\n", business, OrderSummary["processKey"], OrderSummary["processTitle"], OrderSummary["taskId"], OrderSummary["processInstanceId"])
 					var text string
 					if OrderSummary["processKey"][:3] == "001" {
-						text = fmt.Sprintf("AWork匹配到字段为：%v,故障工单尾号：%v", business, OrderSummary["processKey"][13:])
+						text = fmt.Sprintf("AWork匹配字段为：%v,故障单尾号：%v", business, OrderSummary["processKey"][13:])
 						// 使用 PowerShell 播放语音
 
 					} else if OrderSummary["processKey"][:3] == "042" {
-						text = fmt.Sprintf("AWork匹配到字段为：%v,事件工单尾号：%v", business, OrderSummary["processKey"][13:])
+						text = fmt.Sprintf("AWork匹配字段为：%v,事件单尾号：%v", business, OrderSummary["processKey"][13:])
 					}
 					for i := 0; i < lineto; i++ {
 						// 使用 PowerShell 播放语音

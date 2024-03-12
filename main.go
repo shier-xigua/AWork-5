@@ -22,7 +22,7 @@ func main() {
 		//println(body)
 
 		//如果请求连续失败x次则输出提示
-		zfunc.PrintErrNet(28)
+		zfunc.PrintErrNet(15)
 
 		//将工单输出 //Form工单摘要表
 		var Form = zhttp.InfoMap(body)
