@@ -22,7 +22,11 @@ func main() {
 		//println(body)
 
 		//如果请求连续失败x次则输出提示
-		zfunc.PrintErrNet(15)
+		if voice == 0 && *zfunc.ErrorCount >= 15 {
+			log.Println("网络连接异常，请检查网络连接！，因播报声音设置为0，所以不会发出声音提示!")
+		} else if voice != 0 {
+			zfunc.PrintErrNet(15)
+		}
 
 		//将工单输出 //Form工单摘要表
 		var Form = zhttp.InfoMap(body)

@@ -29,7 +29,7 @@ func Zhttp1(method, url, payload string) (string, error, int) {
 		log.Println("client", err)
 		*zfunc.ErrorCount++
 		//fmt.Println(*zfunc.ErrorCount)
-		return "", err, response.StatusCode
+		return "", err, 0
 	} else {
 		if response.StatusCode == 401 {
 			log.Printf("Response1 Status: %v, 认证失败！请更换Token和Authorization后重启AWork接单工具！！！", response.Status)

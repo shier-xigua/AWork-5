@@ -52,7 +52,11 @@ func PrintName() {
 
 func Voice(sound string) int {
 	var lineto, _ = strconv.Atoi(sound)
-	if lineto == 0 {
+	if sound == "x" {
+		//fmt.Println("jin2")
+		lineto = 0
+	} else if lineto == 0 {
+		//fmt.Println("jin")
 		lineto = 1
 	}
 	fmt.Printf("当前接单成功后语言播放次数设置为：%v； 默认为：1\n", lineto)
